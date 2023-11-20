@@ -8,19 +8,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Polygon.xml" />
+    <None Remove="LinearRing.xml" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Polygon.xml">
+    <Content Include="LinearRing.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="NetTopologySuite" Version="1.15.3" />
-    <PackageReference Include="NetTopologySuite.Features" Version="1.15.1" />
-    <PackageReference Include="NetTopologySuite.IO.GeoJSON" Version="1.15.5" />
+    <PackageReference Include="NetTopologySuite" Version="2.5.0" />
+    <PackageReference Include="NetTopologySuite.Features" Version="2.1.0" />
+    <PackageReference Include="NetTopologySuite.IO.GeoJSON" Version="4.0.0" />
   </ItemGroup>
 
 </Project>

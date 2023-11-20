@@ -2,24 +2,26 @@
 // https://github.com/NetTopologySuite/NetTopologySuite/wiki/GettingStarted#invalid-geometries
 
 using NetTopologySuite.Features;
+using NetTopologySuite.Geometries;
+using NetTopologySuite.Geometries.Utilities;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Xml;
 
-using (var correctedPolygonStream = File.OpenWrite("CorrectedPolygon.xml"))
+using (var correctedLinearRingStream = File.OpenWrite("CorrectedLinearRing.xml"))
 {
-    List<GeoAPI.Geometries.Coordinate> polygonCoordinates = new List<GeoAPI.Geometries.Coordinate>();
-    StringBuilder correctedPolygonCoordinates = new StringBuilder();
+    List<Coordinate> linearRingCoordinates = new List<Coordinate>();
+    StringBuilder correctedLinearRingCoordinates = new StringBuilder();
     var gf = NetTopologySuite.NtsGeometryServices.Instance.CreateGeometryFactory(4326);
     var wktReader = new NetTopologySuite.IO.WKTReader(gf);
 
     XmlDocument xmlDocument = new XmlDocument();
-    using (var referencePolygonStrean = File.OpenRead("Polygon.xml"))
+    using (var referenceLinearRingStrean = File.OpenRead("LinearRing.xml"))
     {
-        if (referencePolygonStrean != null)
+        if (referenceLinearRingStrean != null)
         {
-            xmlDocument.Load(referencePolygonStrean);
+            xmlDocument.Load(referenceLinearRingStrean);
         }
         var coordinates = xmlDocument.GetElementsByTagName("coordinates");
         if (coordinates?.Count > 0)
@@ -43,11 +45,10 @@ using (var correctedPolygonStream = File.OpenWrite("CorrectedPolygon.xml"))
                             string[] tokens = coordinateString.Split(',');
                             if (tokens.Length == 3)
                             {
-                                polygonCoordinates.Add(new GeoAPI.Geometries.Coordinate()
+                                linearRingCoordinates.Add(new Coordinate()
                                 {
                                     X = Double.Parse(tokens[0]),
-                                    Y = Double.Parse(tokens[1]),
-                                    Z = Double.Parse(tokens[2])
+                                    Y = Double.Parse(tokens[1])
                                 });
                             }
 
@@ -61,22 +62,22 @@ using (var correctedPolygonStream = File.OpenWrite("CorrectedPolygon.xml"))
 
         }
 
-        var referencePolygon = gf.CreatePolygon(polygonCoordinates.ToArray());
+        var referenceLinearRing = gf.CreateLinearRing(linearRingCoordinates.ToArray());
 
-        Console.WriteLine($"Reference Polygon - Valid: {referencePolygon.IsValid}");
-        if (!referencePolygon.IsValid)
+        Console.WriteLine($"Reference Linear Ring - Valid: {referenceLinearRing.IsValid}");
+        if (!referenceLinearRing.IsValid)
         {
-            var validPolygon = referencePolygon.Buffer(0);
-            Console.WriteLine($"Reference Polygon has been corrected - Valid: {validPolygon.IsValid}");
-            foreach (var correctedCoordinate in validPolygon.Coordinates)
+            var validLinearRing = GeometryFixer.Fix(referenceLinearRing);
+            Console.WriteLine($"Reference Linear Ring has been corrected - Valid: {validLinearRing.IsValid}");
+            foreach (var correctedCoordinate in referenceLinearRing.Coordinates)
             {
-                correctedPolygonCoordinates.AppendLine($"{correctedCoordinate.X},{correctedCoordinate.Y},{0}");
+                correctedLinearRingCoordinates.AppendLine($"{correctedCoordinate.X},{correctedCoordinate.Y},{0}");
             }
 
             if (coordinates?.Count > 0)
             {
-                coordinates[0].InnerText = correctedPolygonCoordinates.ToString();
-                xmlDocument.Save(correctedPolygonStream);
+                coordinates[0].InnerText = correctedLinearRingCoordinates.ToString();
+                xmlDocument.Save(correctedLinearRingStream);
             }
 
         }
