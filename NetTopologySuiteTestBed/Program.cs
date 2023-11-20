@@ -70,7 +70,7 @@ using (var correctedLinearRingStream = File.OpenWrite("CorrectedLinearRing.xml")
         {
             var validLinearRing = GeometryFixer.Fix(referenceLinearRing,false);
             Console.WriteLine($"Reference Linear Ring has been corrected - Valid: {validLinearRing.IsValid}");
-            foreach (var correctedCoordinate in referenceLinearRing.Coordinates)
+            foreach (var correctedCoordinate in validLinearRing.Coordinates)
             {
                 correctedLinearRingCoordinates.AppendLine($"{correctedCoordinate.X},{correctedCoordinate.Y},{0}");
             }

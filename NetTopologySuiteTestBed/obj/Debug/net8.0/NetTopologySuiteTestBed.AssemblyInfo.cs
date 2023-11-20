@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NetTopologySuiteTestBed")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+08ca4a7f38b17668ee77d5adb98b27e8de1766f7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+16595e0407331c552a736724fb79a7d10cf809ec")]
 [assembly: System.Reflection.AssemblyProductAttribute("NetTopologySuiteTestBed")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NetTopologySuiteTestBed")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
