@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "0XdoOlsgAoh2E6X1uMm8AYRhh6m1kt68N8NV3dN5rYyWBQ+eCqYgPyG5EqH9sS6X3BDy64lUJYIPS1sn9d0ZmA==",
+  "dgSpecHash": "IJ7ZlA+BSdVFjtTqFPk3b/SO/sgtYmYmdm6UXUDuiJ2wvgFSPXhIctK0GtyzTseMwm443ctktr5gBWX/ZU8gDg==",
   "success": true,
-  "projectFilePath": "/Users/jubalmurrian/Projects/NetTopologySuiteTestBed/NetTopologySuiteTestBed/NetTopologySuiteTestBed.csproj",
+  "projectFilePath": "Y:\\NetTopologySuiteTestBed\\NetTopologySuiteTestBed\\NetTopologySuiteTestBed.csproj",
   "expectedPackageFiles": [
-    "/Users/jubalmurrian/.nuget/packages/nettopologysuite/2.5.0/nettopologysuite.2.5.0.nupkg.sha512",
-    "/Users/jubalmurrian/.nuget/packages/nettopologysuite.features/2.1.0/nettopologysuite.features.2.1.0.nupkg.sha512",
-    "/Users/jubalmurrian/.nuget/packages/nettopologysuite.io.geojson/4.0.0/nettopologysuite.io.geojson.4.0.0.nupkg.sha512",
-    "/Users/jubalmurrian/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
-    "/Users/jubalmurrian/.nuget/packages/system.memory/4.5.4/system.memory.4.5.4.nupkg.sha512"
+    "C:\\Users\\jubalmurrian\\.nuget\\packages\\nettopologysuite\\2.5.0\\nettopologysuite.2.5.0.nupkg.sha512",
+    "C:\\Users\\jubalmurrian\\.nuget\\packages\\nettopologysuite.features\\2.1.0\\nettopologysuite.features.2.1.0.nupkg.sha512",
+    "C:\\Users\\jubalmurrian\\.nuget\\packages\\nettopologysuite.io.geojson\\4.0.0\\nettopologysuite.io.geojson.4.0.0.nupkg.sha512",
+    "C:\\Users\\jubalmurrian\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\jubalmurrian\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512"
   ],
   "logs": []
 }

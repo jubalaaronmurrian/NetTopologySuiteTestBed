@@ -178,24 +178,32 @@
     ]
   },
   "packageFolders": {
-    "/Users/jubalmurrian/.nuget/packages/": {}
+    "C:\\Users\\jubalmurrian\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jubalmurrian/Projects/NetTopologySuiteTestBed/NetTopologySuiteTestBed/NetTopologySuiteTestBed.csproj",
+      "projectUniqueName": "Y:\\NetTopologySuiteTestBed\\NetTopologySuiteTestBed\\NetTopologySuiteTestBed.csproj",
       "projectName": "NetTopologySuiteTestBed",
-      "projectPath": "/Users/jubalmurrian/Projects/NetTopologySuiteTestBed/NetTopologySuiteTestBed/NetTopologySuiteTestBed.csproj",
-      "packagesPath": "/Users/jubalmurrian/.nuget/packages/",
-      "outputPath": "/Users/jubalmurrian/Projects/NetTopologySuiteTestBed/NetTopologySuiteTestBed/obj/",
+      "projectPath": "Y:\\NetTopologySuiteTestBed\\NetTopologySuiteTestBed\\NetTopologySuiteTestBed.csproj",
+      "packagesPath": "C:\\Users\\jubalmurrian\\.nuget\\packages\\",
+      "outputPath": "Y:\\NetTopologySuiteTestBed\\NetTopologySuiteTestBed\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/jubalmurrian/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\jubalmurrian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -243,7 +251,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

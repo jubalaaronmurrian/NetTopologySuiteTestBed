@@ -65,9 +65,10 @@ using (var correctedLinearRingStream = File.OpenWrite("CorrectedLinearRing.xml")
         var referenceLinearRing = gf.CreateLinearRing(linearRingCoordinates.ToArray());
 
         Console.WriteLine($"Reference Linear Ring - Valid: {referenceLinearRing.IsValid}");
+        Console.WriteLine($"Reference Linear Ring - CCW: {referenceLinearRing.IsCCW}");
         if (!referenceLinearRing.IsValid)
         {
-            var validLinearRing = GeometryFixer.Fix(referenceLinearRing);
+            var validLinearRing = GeometryFixer.Fix(referenceLinearRing,false);
             Console.WriteLine($"Reference Linear Ring has been corrected - Valid: {validLinearRing.IsValid}");
             foreach (var correctedCoordinate in referenceLinearRing.Coordinates)
             {
